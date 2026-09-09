@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #242a3b,
+            #090b10 65%
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.app {
+
+    width: 100%;
+
+    max-width: 650px;
+}
+
+.stopwatch {
+
+    background: rgba(19,23,34,0.94);
+
+    border: 1px solid #303747;
+
+    border-radius: 24px;
+
+    padding: 42px 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.4);
+}
+
+.label {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    color: #57e0d1;
+
+    font-weight: bold;
+}
+
+h1 {
+
+    font-size: 2rem;
+
+    margin: 12px 0 25px;
+}
+
+.time {
+
+    font-family: monospace;
+
+    font-size: clamp(
+        2.5rem,
+        10vw,
+        5rem
+    );
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+}
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+button {
+
+    border: 1px solid #3c4353;
+
+    background: #1b2130;
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #57e0d1;
+}
+
+#start {
+
+    background: #57e0d1;
+
+    color: #07100f;
+}
+
+.laps-wrap {
+
+    text-align: left;
+
+    margin-top: 35px;
+
+    border-top: 1px solid #2b3140;
+
+    padding-top: 25px;
+}
+
+.laps-wrap h2 {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 12px;
+}
+
+ol {
+
+    max-height: 240px;
+
+    overflow: auto;
+
+    padding-left: 30px;
+}
+
+li {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #252b38;
+
+    color: #d4d8e1;
+}
+
+
+@media(max-width:450px) {
+
+    .stopwatch {
+
+        padding: 32px 16px;
+    }
+
+    .time {
+
+        font-size: 2.3rem;
+    }
+
+    button {
+
+        flex: 1;
+    }
+}
